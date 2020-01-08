@@ -4,7 +4,7 @@ exports.onPreBootstrap = ({ reporter }) => {
   const contentPath = "entries"
 
   if (!fs.existsSync(contentPath)) {
-    reporter.info(`creating the ${contentPath} directory`)
+    reporter.info(`Creating the ${contentPath} directory`)
     fs.mkdirSync(contentPath)
   }
 }
@@ -14,10 +14,11 @@ exports.sourceNodes = ({ actions }) => {
   const typeDefs = `
     type Mdx implements Node {
       frontmatter: FrontMatter
+      id: ID!
     }
 
-    type Frontmatter {
-      date: Date!
+    type FrontMatter {
+      date: Date! @dateformat
       weather: Weather
       locations: [String]
     }
