@@ -12,6 +12,11 @@ const Day = ({ day, entry, onClick, activeEntry }) => {
   return (
     <div
       {...entry.length && { onClick }}
+      title={
+        isToday
+          ? `${format(day, 'MMM d')} (Today)`
+          : format(day, 'MMM d')
+      }
       sx={{
         textAlign: `center`,
         alignSelf: `stretch`,
@@ -19,6 +24,7 @@ const Day = ({ day, entry, onClick, activeEntry }) => {
         alignItems: `center`,
         justifyContent: `center`,
         borderRadius: `4px`,
+        position: `relative`,
         transition: `background 0.2s ease, color 0.2s ease`,
         cursor:
           hasEntry
@@ -35,11 +41,10 @@ const Day = ({ day, entry, onClick, activeEntry }) => {
             ? `text`
             : hasEntry
             ? `#f7f9fa`
-            : isToday
-            ? `#f7f9fa`
             : false,
       }}>
       <div>
+        {isToday && <div title="Today" sx={{ width: `4px`, height: `4px`, borderRadius: `2px`, background: `red`, position: `absolute`, top: `60%`, left: `50%`, transform: `translateX(-50%)`}}/>}
         {format(day, 'd')}
       </div>
     </div>
