@@ -44,7 +44,7 @@ const Day = ({ day, entry, onClick, activeEntry }) => {
             : false,
       }}>
       <div>
-        {isToday && <div title="Today" sx={{ width: `4px`, height: `4px`, borderRadius: `2px`, background: `red`, position: `absolute`, top: `60%`, left: `50%`, transform: `translateX(-50%)`}}/>}
+        {isToday && <div title="Today" sx={{ width: `4px`, height: `4px`, borderRadius: `2px`, background: `red`, position: `absolute`, bottom: `20%`, left: `50%`, transform: `translateX(-50%)`}}/>}
         {format(day, 'd')}
       </div>
     </div>

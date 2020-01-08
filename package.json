@@ -2,7 +2,7 @@
   "name": "gatsby-theme-recal",
   "version": "1.0.0",
   "license": "MIT",
-  "main": "index.js",
+  "main": "gatsby-config.js",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",

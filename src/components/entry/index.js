@@ -12,7 +12,6 @@ function EntryContainer(props) {
     <div
       sx={{
         overflow: `scroll`,
-        height: `100vh`,
         'WebkitOverflowScrolling': 'touch',
         position: 'relative'
       }}>
